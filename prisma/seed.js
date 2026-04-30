@@ -39,83 +39,83 @@ const SEED_USERS = [
 const SEED_PRODUCTS = [
   {
     id: 1,
-    name: 'Botella Reutilizable de Bambú',
-    description: 'Botella ecológica de 750ml fabricada con bambú sostenible y acero inoxidable.',
-    price: 99900,
-    category: 'Hogar',
-    stock: 35,
-    image: 'https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=600&q=80',
+    name: 'Teclado Mecánico Gaming RGB',
+    description: 'Teclado mecánico con switches azules, retroiluminación RGB y conexión USB-C trenzada.',
+    price: 349900,
+    category: 'Tecnología',
+    stock: 25,
+    image: 'https://images.unsplash.com/photo-1541140532154-b024d705b90a?w=600&q=80',
     rating: 4.7
   },
   {
     id: 2,
-    name: 'Bolsa de Algodón Orgánico',
-    description: 'Bolsa reutilizable hecha 100% de algodón orgánico certificado.',
-    price: 38000,
-    category: 'Accesorios',
-    stock: 120,
-    image: 'https://images.unsplash.com/photo-1597484661973-ee6cd0b6482c?w=600&q=80',
+    name: 'Gafas de Sol Polarizadas',
+    description: 'Gafas unisex con protección UV400, lentes polarizadas y montura ligera de acetato.',
+    price: 179900,
+    category: 'Moda',
+    stock: 70,
+    image: 'https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=600&q=80',
     rating: 4.5
   },
   {
     id: 3,
-    name: 'Cepillo Dental de Bambú',
-    description: 'Pack de 4 cepillos dentales biodegradables con cerdas suaves.',
-    price: 49900,
-    category: 'Higiene',
-    stock: 80,
-    image: 'https://images.unsplash.com/photo-1559591937-abc3a5fb6f30?w=600&q=80',
-    rating: 4.8
+    name: 'Bicicleta Plegable Urbana',
+    description: 'Bicicleta plegable de 7 velocidades, ideal para movilidad urbana y trayectos diarios.',
+    price: 1299900,
+    category: 'Deportes',
+    stock: 12,
+    image: 'https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=600&q=80',
+    rating: 4.6
   },
   {
     id: 4,
-    name: 'Pajitas de Acero Inoxidable',
-    description: 'Set de 6 pajitas reutilizables con cepillo de limpieza incluido.',
-    price: 59900,
-    category: 'Cocina',
-    stock: 60,
-    image: 'https://images.unsplash.com/photo-1572441710534-91e1f31a89aa?w=600&q=80',
-    rating: 4.6
+    name: 'Robot Aspirador Inteligente',
+    description: 'Robot aspirador con mapeo láser, app de control, succión potente y autonomía de 120 min.',
+    price: 899900,
+    category: 'Hogar',
+    stock: 18,
+    image: 'https://images.unsplash.com/photo-1567892737950-30c4db37cd89?w=600&q=80',
+    rating: 4.8
   },
   {
     id: 5,
-    name: 'Jabón Natural Artesanal',
-    description: 'Jabón vegano hecho a mano con aceites esenciales y sin químicos.',
-    price: 29500,
-    category: 'Higiene',
-    stock: 200,
-    image: 'https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?w=600&q=80',
-    rating: 4.9
+    name: 'Perfume Eau de Parfum 100ml',
+    description: 'Fragancia oriental amaderada con notas de bergamota, sándalo y vainilla. Larga duración.',
+    price: 279900,
+    category: 'Belleza',
+    stock: 35,
+    image: 'https://images.unsplash.com/photo-1541643600914-78b084683601?w=600&q=80',
+    rating: 4.7
   },
   {
     id: 6,
-    name: 'Cargador Solar Portátil',
-    description: 'Cargador solar de 10000mAh, ideal para viajes y emergencias.',
-    price: 199900,
+    name: 'Cámara Mirrorless 4K',
+    description: 'Cámara sin espejo de 24MP con grabación 4K, estabilización de imagen y kit 18-55mm.',
+    price: 2499900,
     category: 'Tecnología',
-    stock: 25,
-    image: 'https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=600&q=80',
-    rating: 4.4
+    stock: 8,
+    image: 'https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=600&q=80',
+    rating: 4.9
   },
   {
     id: 7,
-    name: 'Compostera Doméstica',
-    description: 'Compostera de cocina de 5L para reducir residuos orgánicos en casa.',
-    price: 155000,
-    category: 'Hogar',
-    stock: 18,
-    image: 'https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&q=80',
-    rating: 4.3
+    name: 'Reloj Análogo Acero Inoxidable',
+    description: 'Reloj clásico para hombre, correa de acero, resistente al agua 5ATM y movimiento suizo.',
+    price: 459900,
+    category: 'Moda',
+    stock: 22,
+    image: 'https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=600&q=80',
+    rating: 4.6
   },
   {
     id: 8,
-    name: 'Camiseta de Algodón Reciclado',
-    description: 'Camiseta unisex fabricada con algodón reciclado y tintes naturales.',
-    price: 89900,
-    category: 'Ropa',
-    stock: 45,
-    image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&q=80',
-    rating: 4.6
+    name: 'Set de Sartenes Antiadherentes',
+    description: 'Juego de 3 sartenes con recubrimiento cerámico libre de PFOA, aptas para inducción.',
+    price: 189900,
+    category: 'Hogar',
+    stock: 40,
+    image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80',
+    rating: 4.4
   }
 ];
 
@@ -142,7 +142,7 @@ async function seedUsers() {
 }
 
 async function seedProducts() {
-  console.log('\n🌿 Cargando productos...');
+  console.log('\n📦 Cargando productos...');
   for (const p of SEED_PRODUCTS) {
     const product = await prisma.product.upsert({
       where: { id: p.id },
@@ -167,7 +167,7 @@ async function seedProducts() {
 }
 
 async function main() {
-  console.log('🌱 Seed de EcoMart');
+  console.log('🛒 Seed de EcoMart');
   console.log('==================');
   await seedUsers();
   await seedProducts();
