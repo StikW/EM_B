@@ -64,7 +64,7 @@ const SEED_PRODUCTS = [
     price: 49900,
     category: 'Higiene',
     stock: 80,
-    image: 'https://images.unsplash.com/photo-1559591937-abc3a5fb6f30?w=600&q=80',
+    image: 'https://unsplash.com/es/fotos/palos-de-madera-marron-en-cuenco-de-ceramica-gris-7TgbRVEYdYY',
     rating: 4.8
   },
   {
@@ -120,7 +120,7 @@ const SEED_PRODUCTS = [
 ];
 
 async function seedUsers() {
-  console.log('\n👥 Cargando usuarios...');
+  console.log('\n Cargando usuarios...');
   for (const u of SEED_USERS) {
     const passwordHash = await bcrypt.hash(u.password, 10);
     const user = await prisma.user.upsert({
@@ -142,7 +142,7 @@ async function seedUsers() {
 }
 
 async function seedProducts() {
-  console.log('\n🌿 Cargando productos...');
+  console.log('\n Cargando productos...');
   for (const p of SEED_PRODUCTS) {
     const product = await prisma.product.upsert({
       where: { id: p.id },
@@ -167,7 +167,7 @@ async function seedProducts() {
 }
 
 async function main() {
-  console.log('🌱 Seed de EcoMart');
+  console.log(' Seed de EcoMart');
   console.log('==================');
   await seedUsers();
   await seedProducts();
