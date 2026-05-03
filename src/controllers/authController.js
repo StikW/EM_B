@@ -2,7 +2,38 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const UserModel = require('../models/UserModel');
 
-const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+/**
+ * Validación de email en tiempo lineal (sin regex vulnerable a ReDoS, Sonar S5852).
+ * Equivale al patrón anterior salvo límites RFC (local ≤64, dominio ≤253) que el regex no aplicaba.
+ */
+function isValidEmail(raw) {
+  if (typeof raw !== 'string') return false;
+  // Mismo criterio que el regex antiguo (^…$): sin espacios al inicio ni al final del string.
+  if (raw !== raw.trim()) return false;
+  const email = raw;
+  if (email.length === 0 || email.length > 254) return false;
+  if (/\s/.test(email)) return false;
+
+  const at = email.indexOf('@');
+  if (at <= 0) return false;
+  if (email.indexOf('@', at + 1) !== -1) return false;
+
+  const local = email.slice(0, at);
+  const domain = email.slice(at + 1);
+  // RFC 5321: parte local ≤ 64, dominio ≤ 253 (el regex antiguo no lo limitaba; aquí sí, por corrección).
+  if (local.length > 64 || domain.length === 0 || domain.length > 253) return false;
+
+  const dot = domain.lastIndexOf('.');
+  if (dot <= 0 || dot === domain.length - 1) return false;
+
+  const tld = domain.slice(dot + 1);
+  if (tld.length === 0) return false;
+
+  for (const part of domain.split('.')) {
+    if (part.length === 0) return false;
+  }
+  return true;
+}
 
 function signToken(user) {
   return jwt.sign(
@@ -20,7 +51,7 @@ class AuthController {
       if (!name || !email || !password) {
         return res.status(400).json({ message: 'Nombre, email y contraseña son obligatorios.' });
       }
-      if (!EMAIL_REGEX.test(email)) {
+      if (!isValidEmail(email)) {
         return res.status(400).json({ message: 'El email no tiene un formato válido.' });
       }
       if (String(password).length < 6) {
