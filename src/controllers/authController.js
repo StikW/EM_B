@@ -16,7 +16,8 @@ function isValidEmail(raw) {
 
   const at = email.indexOf('@');
   if (at <= 0) return false;
-  if (email.indexOf('@', at + 1) !== -1) return false;
+  // includes(search, fromIndex) equivale a indexOf('@', at + 1) !== -1 (solo booleano, sin comparar con -1).
+  if (email.includes('@', at + 1)) return false;
 
   const local = email.slice(0, at);
   const domain = email.slice(at + 1);

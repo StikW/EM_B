@@ -7,6 +7,7 @@ const cartRoutes = require('./routes/cartRoutes');
 const errorHandler = require('./middleware/errorHandler');
 
 const app = express();
+app.disable('x-powered-by');
 
 app.use(cors({
   origin: process.env.CORS_ORIGIN || 'http://localhost:4200',
