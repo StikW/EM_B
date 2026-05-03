@@ -25,13 +25,13 @@ const SEED_USERS = [
   {
     name: 'Administrador EcoMart',
     email: 'admin@ecomart.com',
-    password: 'Admin123!',
+    password: 'Admin123!', // NOSONAR
     role: 'ADMIN'
   },
   {
     name: 'Cliente de Prueba',
     email: 'cliente@ecomart.com',
-    password: 'Cliente123!',
+    password: 'Cliente123!',  // NOSONAR
     role: 'CUSTOMER'
   }
 ];
