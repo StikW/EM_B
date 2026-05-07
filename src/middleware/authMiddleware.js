@@ -13,7 +13,16 @@ function authMiddleware(req, res, next) {
     req.user = payload;
     next();
   } catch (err) {
-    return res.status(401).json({ message: 'Token inválido o expirado.' });
+    if (err.name === 'TokenExpiredError') {
+      return res.status(401).json({ message: 'El token de sesión ha expirado.' });
+    }
+    if (err.name === 'JsonWebTokenError') {
+      return res.status(401).json({ message: 'Token inválido o mal formado.' });
+    }
+    if (err.name === 'NotBeforeError') {
+      return res.status(401).json({ message: 'El token aún no es válido.' });
+    }
+    return next(err);
   }
 }
 
