@@ -120,7 +120,7 @@ const SEED_PRODUCTS = [
 ];
 
 async function seedUsers() {
-  console.log('\n Cargando usuarios...');
+  console.log('\n👥 Cargando usuarios...');
   for (const u of SEED_USERS) {
     const passwordHash = await bcrypt.hash(u.password, 10);
     const user = await prisma.user.upsert({
@@ -142,7 +142,7 @@ async function seedUsers() {
 }
 
 async function seedProducts() {
-  console.log('\n Cargando productos...');
+  console.log('\n🌿 Cargando productos...');
   for (const p of SEED_PRODUCTS) {
     const product = await prisma.product.upsert({
       where: { id: p.id },
@@ -167,7 +167,7 @@ async function seedProducts() {
 }
 
 async function main() {
-  console.log(' Seed de EcoMart');
+  console.log('🌱 Seed de EcoMart');
   console.log('==================');
   await seedUsers();
   await seedProducts();
