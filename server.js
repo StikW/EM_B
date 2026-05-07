@@ -10,5 +10,11 @@ app.listen(PORT, () => {
   console.log(`   - POST   /api/auth/login`);
   console.log(`   - GET    /api/auth/me        (protegido)`);
   console.log(`   - GET    /api/products`);
-  console.log(`   - GET    /api/products/:id\n`);
+  console.log(`   - GET    /api/products/:id`);
+  console.log(`   - GET    /api/cart                      (protegido)`);
+  console.log(`   - POST   /api/cart/items                (protegido)`);
+  console.log(`   - PATCH  /api/cart/items/:productId     (protegido)`);
+  console.log(`   - DELETE /api/cart/items/:productId     (protegido)`);
+  console.log(`   - DELETE /api/cart                      (protegido)\n`);
+  console.log('   .');
 });
