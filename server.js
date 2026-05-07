@@ -16,4 +16,5 @@ app.listen(PORT, () => {
   console.log(`   - PATCH  /api/cart/items/:productId     (protegido)`);
   console.log(`   - DELETE /api/cart/items/:productId     (protegido)`);
   console.log(`   - DELETE /api/cart                      (protegido)\n`);
+  console.log('   .');
 });
